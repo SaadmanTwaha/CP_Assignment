@@ -5,7 +5,6 @@ for i in range(5):
     answer = input(f"Q{i+1}: ").upper()
     your_answer.append(answer)
 
-#print(your_answer)
 
 x = 0
 matched_answers = 0
