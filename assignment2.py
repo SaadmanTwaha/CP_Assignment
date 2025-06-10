@@ -1,17 +1,14 @@
 candidate = input("Enter candidates name(comma separated): ")
 candidate_list = candidate.split(",")
-#print(candidate_list)
+
 
 vote_result = {}
 for x in candidate_list:
-    '''key = x
-    value = 0
-    vote_result[key] = value'''
     vote_result[x] = 0
 
 
 
-#print(vote_result)
+
 
 n = int(input("Enter number of voters: "))
 
