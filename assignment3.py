@@ -1,3 +1,4 @@
+print("Enter your answer for the five questions(A/B/C/D)")
 correct_answers = ['A','C','B','D','B']
 
 your_answer = []
