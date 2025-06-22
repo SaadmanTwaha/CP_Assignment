@@ -1,23 +1,29 @@
-candidate = input("Enter candidates name(comma separated): ")
+candidate = input("Enter candidates name(comma separated): ").strip()
+#print(candidate)
 candidate_list = candidate.split(",")
-
+#print(candidate_list)
 
 vote_result = {}
 for x in candidate_list:
+    '''key = x
+    value = 0
+    vote_result[key] = value'''
     vote_result[x] = 0
 
 
 
-
+#print(vote_result)
 
 n = int(input("Enter number of voters: "))
 
 for i in range(n):
-    voter_choice = input(f"Voter {i+1}, enter your vote: ")
+    voter_choice = input(f"Voter {i+1}, enter your vote: ").strip()
     if voter_choice in candidate_list:
         vote_result[voter_choice] += 1
     else:
-        print(voter_choice,"is not found in candidate list")
+        while voter_choice not in candidate_list:
+            voter_choice = input("Candidate not found. Please enter a valid name: ").strip()
+        vote_result[voter_choice] += 1
 
 print("---Vote Count---")
 for key,value in vote_result.items():
